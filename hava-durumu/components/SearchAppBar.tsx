@@ -38,7 +38,6 @@ const SearchAppBar: React.FC<SearchAppBarProps> = ({ onSearch }) => {
   };
   return (
     <Box
-      className="third-step"
       sx={{
         flexGrow: 1,
       }}
@@ -66,7 +65,10 @@ const SearchAppBar: React.FC<SearchAppBarProps> = ({ onSearch }) => {
             🌤 Hava Durumu
           </Typography>
           <Search>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              sx={{ display: "flex", alignItems: "center" }}
+              className="third-step"
+            >
               <AutocompleteSearch onAddCity={onSearch} />
             </Box>
           </Search>

@@ -19,7 +19,6 @@ const TemperatureLineChart: React.FC<TemperatureLineChartProps> = ({
 }) => {
   return (
     <Card
-      className="subsub-second-step"
       sx={{
         maxWidth: 600,
         margin: "1rem auto",
@@ -27,6 +26,7 @@ const TemperatureLineChart: React.FC<TemperatureLineChartProps> = ({
         borderRadius: 3,
         boxShadow: 5,
       }}
+      className="subsub-second-step"
     >
       <CardContent
         sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}

@@ -39,6 +39,7 @@ const WeeklyCard: React.FC<WeeklyCardProps> = ({
 }: WeeklyCardProps) => {
   return (
     <Card
+      className="sub-second-step"
       sx={{
         maxWidth: 500,
         margin: "1rem auto",
