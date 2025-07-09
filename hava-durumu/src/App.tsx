@@ -231,7 +231,7 @@ function App() {
 
           const isPrimary = city === primaryCity;
           const color = isPrimary ? "#EAFDFF" : "#FFFFF";
-          const step = isPrimary ? "second-step" : "fourth-step";
+
           return (
             <Box
               key={city}
@@ -245,7 +245,6 @@ function App() {
               }}
             >
               <Box
-                className={step}
                 sx={{
                   display: "flex",
                   flexDirection: "row",
@@ -275,7 +274,6 @@ function App() {
                   {!isPrimary && (
                     <>
                       <IconButton
-                        className="sub-fourth-step"
                         size="small"
                         onClick={(e) => {
                           setMenuAnchorEl(e.currentTarget);
@@ -378,10 +376,6 @@ function App() {
       </>
     );
   };
-  const { setIsOpen } = useTour();
-  useEffect(() => {
-    setIsOpen(true); // Start tour on mount
-  }, [setIsOpen]);
   return (
     <div>
       <SearchAppBar onSearch={handleAddCity} />
@@ -419,7 +413,6 @@ function App() {
       </Menu>
 
       <Box
-        className="subsub-second-step"
         sx={{
           display: "flex",
           flexDirection: "row",

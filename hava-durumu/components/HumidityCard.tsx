@@ -11,7 +11,6 @@ interface HumidityCardProps {
 const HumidityCard: React.FC<HumidityCardProps> = ({ humidity, color }) => {
   return (
     <Card
-      className="fifth-step"
       sx={{
         width: 130,
         height: 90,
@@ -23,6 +22,7 @@ const HumidityCard: React.FC<HumidityCardProps> = ({ humidity, color }) => {
     >
       <CardContent sx={{ display: "flex", alignItems: "center", flexGrow: 10 }}>
         <Box
+          className="fifth-step"
           sx={{
             display: "flex",
             alignItems: "center",

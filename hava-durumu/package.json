@@ -17,8 +17,9 @@
     "@mui/x-charts": "^8.3.0",
     "@reactour/tour": "^3.8.0",
     "axios": "^1.9.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-joyride": "^2.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
