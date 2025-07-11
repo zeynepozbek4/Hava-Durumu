@@ -36,9 +36,12 @@ const steps = [
   },
   {
     selector: ".sub-fourth-step",
-    content: "Ayrıca bu butona basarak eklediğiniz şehirleri silebilirsiniz. ",
+    content: "Silme menüsünü açmak için bu butona tıklayın. ",
   },
-
+  {
+    selector: ".subsub-fourth-step",
+    content: "Şehri silmek için buraya tıklayın.",
+  },
   {
     selector: ".fifth-step",
     content:
@@ -58,10 +61,62 @@ function ScrollHandler() {
   return null; // This component just does the side effect
 }
 
+function ClickHandler() {
+  const { currentStep, setCurrentStep } = useTour();
+
+  useEffect(() => {
+    if (currentStep === 6) {
+      const button = document.querySelector(".sub-fourth-step");
+
+      if (!button) return;
+
+      const onClick = () => {
+        const checkMenu = setInterval(() => {
+          const menuItem = document.querySelector(".subsub-fourth-step");
+          if (menuItem) {
+            clearInterval(checkMenu);
+            setTimeout(() => setCurrentStep(7), 150);
+          }
+        }, 100);
+      };
+
+      button.addEventListener("click", onClick, { once: true });
+
+      return () => {
+        button.removeEventListener("click", onClick);
+      };
+    }
+    if (currentStep === 7) {
+      const dropdown = document.querySelector(".subsub-fourth-step");
+
+      if (!dropdown) return;
+
+      const onClick = () => {
+        const checkMenuClose = setInterval(() => {
+          const menuItem = document.querySelector(".subsub-fourth-step");
+          if (!menuItem) {
+            clearInterval(checkMenuClose);
+            setTimeout(() => setCurrentStep(8), 100);
+          }
+        }, 100);
+      };
+
+      dropdown.addEventListener("click", onClick, { once: true });
+
+      return () => {
+        dropdown.removeEventListener("click", onClick);
+      };
+    }
+  }, [currentStep, setCurrentStep]);
+
+  return null;
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <TourProvider steps={steps}>
       <ScrollHandler />
+      <ClickHandler />
       <App />
     </TourProvider>
   </StrictMode>

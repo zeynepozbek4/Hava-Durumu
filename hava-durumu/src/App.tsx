@@ -407,6 +407,7 @@ function App() {
         }}
       >
         <MenuItem
+          className="subsub-fourth-step"
           onClick={() => {
             if (menuCity) handleRemoveCity(menuCity);
             setMenuAnchorEl(null);
