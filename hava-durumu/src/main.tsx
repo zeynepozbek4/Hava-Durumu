@@ -96,7 +96,7 @@ function ClickHandler() {
           const menuItem = document.querySelector(".subsub-fourth-step");
           if (!menuItem) {
             clearInterval(checkMenuClose);
-            setTimeout(() => setCurrentStep(8), 100);
+            setTimeout(() => setCurrentStep(8), 0);
           }
         }, 100);
       };
