@@ -1,0 +1,13 @@
+####
+
+To use the website on your own, you should go through the following steps:
+1-Rename this file as .env
+2-Copy your own API keys that you provide from OpenWeatherAPI to VITE_WEATHER_API_KEY and from Weatherbit API to VITE_WEATHER2_API_KEY in the bottommost lines
+3-Delete all instruction lines between #### signs
+
+CAUTION: you need a business trial in Weatherbit to access the data, which is only up for 21 days unless you pay for full access, but that is unnecessary for short-term usage of my website.
+
+####
+
+VITE_WEATHER_API_KEY=your-openweather-key
+VITE_WEATHER2_API_KEY=your-weatherbit-key
