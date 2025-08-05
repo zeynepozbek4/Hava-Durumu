@@ -3,7 +3,7 @@
 
 ## API'ları kendi localinizde kullanmak için:
 dummyenv dosyasını ziyaret edin.
-## Host kurulumu için: 
+## Kurulum için: 
 ```npm install```
 ## Çalıştırmak için:
 ```npm run dev```
